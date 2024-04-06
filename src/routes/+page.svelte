@@ -5,7 +5,10 @@
     /** @type {import('./$types').PageData} */
     export let data;
 
-    let todos = data.todos;
+    let previousTodos = data.todos;
+
+    let todos = previousTodos;
+    
 
     $: console.log(todos.length);
 </script>
@@ -17,17 +20,17 @@
     {#if todos.length > 0}
         {#each todos as description}
             <Task
-                title={description.Title}
+             title={description.Title}
                 description={description.Description}
             />
             <br />
         {/each}
         <br />
-        <CreateTask {todos} />
-    {:else}
+        <CreateTask bind:todos={todos} />
+     {:else}
         <h4>Please create a todo!!</h4>
 
-        <CreateTask {todos} />
+        <CreateTask  bind:todos={todos} />
     {/if}
 </main>
 
