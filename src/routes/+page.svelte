@@ -37,14 +37,15 @@
 <style>
     main {
         text-align: left;
-        padding: 2em;
+        padding: 1.5em;
+        
         display: block;
         position: relative;
     }
-
+/* 
     @media (min-width: 640px) {
         main {
             max-width: none;
         }
-    }
+    } */
 </style>
