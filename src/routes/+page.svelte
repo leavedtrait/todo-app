@@ -15,7 +15,7 @@
 
 <main>
     <h3>Basic Todo App Svelte 🧡🧡 + Go 💙💙</h3>
-    <h5>by Johnson macharia</h5>
+    <h5>by me</h5>
     <br />
     {#if todos.length > 0}
         {#each todos as description}
